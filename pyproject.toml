@@ -1,0 +1,14 @@
+[project]
+name = "cx-genie-semantic-agents"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "databricks-bundles==1.19.0",   # pin to the Databricks CLI version used by the pipeline
+    "databricks-sdk",
+    "pyyaml",
+    # Python mutator that rewrites catalog/schema names in the agents per target (pinned commit)
+    "pydabs-genie-agent-retarget @ git+https://github.com/alexott/pydabs-genie-agent-retarget@ee5c165021a430ad7bac898c63d0097bb5556614",
+]
